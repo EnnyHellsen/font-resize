@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="loadTextFit.js"></script>
+  <script id="textFitLib" src="textFit.js"></script>
+  <style>
+    div {
+      height: 50px;
+      width: 25vw;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 1px solid black;
+      border-radius: 4px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <input class="input-text" type="input" value="Input string">
+    <input class="slider" type="range" min="1" max="50" value="25">
+  </form>
+  <div class="output-div"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>
