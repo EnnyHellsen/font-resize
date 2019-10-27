@@ -1,3 +1,4 @@
+// Find the input field and slider in the html
 const div = document.querySelector('.output-div');
 const textInput = document.querySelector('.input-text');
 const slider = document.querySelector('.slider');
@@ -32,7 +33,7 @@ const waitForTextFit = () => {
 waitForTextFit();
 
 // Set the output div to size depending on range slider value and contain input field text string
-// Call the sizing function
+// and call the sizing function
 const updateText = () => {
   div.style.width = slider.value + 'vw';
   div.innerHTML = textInput.value;
