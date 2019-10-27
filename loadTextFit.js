@@ -5,7 +5,6 @@ window.onerror = () => {
     }
     removeById('textFitLib');
     setTimeout(function () {
-        removeById('slowMotion');
         // Switch to fast lib which doesn't use async/await
         var fastScript = document.createElement('script');
         fastScript.src = 'textFit.js';
