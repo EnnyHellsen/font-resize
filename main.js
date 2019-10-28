@@ -8,8 +8,9 @@ const previousTextValue = localStorage.getItem('text');
 const previousSliderValue = localStorage.getItem('slider');
 
 // Set input fields with previous values
-div.innerHTML = previousTextValue;
-textInput.value = previousTextValue;
+const defaultString = 'Natural Cycles';
+div.innerHTML = previousTextValue || defaultString;
+textInput.value = previousTextValue || defaultString;
 slider.value = previousSliderValue;
 div.style.width = previousSliderValue + 'vw';
 
