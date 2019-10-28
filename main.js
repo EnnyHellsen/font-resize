@@ -7,7 +7,7 @@ const slider = document.querySelector('.slider');
 const previousTextValue = localStorage.getItem('text');
 const previousSliderValue = localStorage.getItem('slider');
 
-// Set input fields with previous values
+// Set input fields and output div with previous values
 const defaultString = 'Natural Cycles';
 div.innerHTML = previousTextValue || defaultString;
 textInput.value = previousTextValue || defaultString;
@@ -17,7 +17,7 @@ div.style.width = previousSliderValue + 'vw';
 // Get the height of the output div as an integer
 const divHeight = parseInt(window.getComputedStyle(div).getPropertyValue('height'));
 
-// Use textFit Library to size the outputted text with the div height as max font size
+// Use textFit Library to size the outputted text with the div width and height as max font size
 const doFit = () => {
   textFit(document.querySelector('.output-div'), { maxFontSize: divHeight });
 }
@@ -40,7 +40,7 @@ const updateText = () => {
   div.innerHTML = textInput.value;
   doFit();
 
-  // save values to access on browser refresh
+  // save values to localstorage to access on browser refresh
   localStorage.setItem('slider', slider.value);
   localStorage.setItem('text', textInput.value);
 }
